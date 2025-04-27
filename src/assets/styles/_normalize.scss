@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, button {
+  all: unset;
+}
+
+body {
+  background: var(--background);
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,116 @@
+.header {
+  padding-top: 20px;
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .logoTablet {
+    display: none;
+  }
+
+  .logoPhone {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 50px;
+
+    .navItem {
+      font-family: "Nunito-SemiBold", sans-serif;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    background: var(--light-gray);
+    border-radius: 20px;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 352px;
+    height: 62px;
+
+    .searchLogo {
+      width: 20px;
+      height: 20px;
+    }
+
+    .searchInput {
+      font-family: Nunito-Regular, sans-serif;
+      font-size: 25px;
+    }
+  }
+
+  .searchMobile {
+    display: none;
+  }
+
+
+
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    padding: 20px;
+    .logoComputer {
+      display: none;
+    }
+
+    .logoTablet {
+      display: block;
+    }
+
+    .navigation {
+      gap: 25px;
+      .navItem {
+        font-size: 22px;
+      }
+    }
+
+    .search {
+      width: 260px;
+      gap: 10px;
+
+      .searchInput {
+        font-size: 19px;
+      }
+    }
+
+
+
+
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    .logoTablet {
+      display: none;
+    }
+
+    .navigation {
+      display: none;
+    }
+
+    .logoPhone {
+      display: block;
+    }
+
+
+
+
+
+    .search {
+      display: none;
+    }
+
+    .searchMobile {
+      display: block;
+    }
+  }
+}

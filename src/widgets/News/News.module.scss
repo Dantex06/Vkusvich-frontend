@@ -1,0 +1,40 @@
+.news {
+  padding: 0 20px;
+  margin-bottom: 80px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    .categoriesItem {
+      font-family: "Nunito-Bold", sans-serif;
+      font-size: 48px;
+    }
+
+    .all {
+      font-family: "Nunito-Bold", sans-serif;
+      font-size: 48px;
+      color: var(--theme-color);
+      cursor: pointer;
+    }
+  }
+
+  .newsList {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin-top: 50px;
+
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .news {
+    .title {
+      .categoriesItem {
+        font-size: 24px;
+      }
+      .all {
+        font-size: 24px;
+      }
+    }
+  }
+}

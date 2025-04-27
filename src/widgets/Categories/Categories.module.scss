@@ -1,0 +1,43 @@
+.categories {
+  padding: 20px 20px 10px 20px;
+  margin-bottom: 70px;
+  overflow: hidden;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    .categoriesItem {
+      font-family: "Nunito-Bold", sans-serif;
+      font-size: 48px;
+    }
+
+    .all {
+      font-family: "Nunito-Bold", sans-serif;
+      font-size: 48px;
+      color: var(--theme-color);
+      cursor: pointer;
+    }
+  }
+
+  .categoriesList {
+    display: flex;
+    gap: 36px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .categories {
+    .title {
+      .categoriesItem {
+        font-size: 24px;
+      }
+
+      .all {
+        font-size: 24px;
+      }
+    }
+
+
+  }
+}

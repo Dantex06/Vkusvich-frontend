@@ -1,0 +1,52 @@
+.newsItem {
+  margin: 0 auto;
+  width: 1100px;
+  height: 720px;
+  border-radius: 20px;
+  background: white;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+
+  .newsImage {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+    height: 520px;
+    width: 100%;
+  }
+
+  .info {
+    padding: 20px;
+    .title {
+      font-family: "Nunito-Bold", sans-serif;
+      font-size: 40px;
+    }
+
+    .description {
+      font-family: "Nunito-SemiBold", sans-serif;
+      font-size: 30px;
+      color: var(--gray);
+    }
+  }
+
+}
+
+@media screen and (max-width: 1140px) {
+  .newsItem {
+    width: 430px;
+    height: 385px;
+
+    .newsImage {
+      height: 263px;
+    }
+
+    .info {
+      padding: 10px;
+      .title {
+        font-size: 24px;
+      }
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
+}

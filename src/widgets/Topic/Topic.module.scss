@@ -1,0 +1,141 @@
+.topic {
+  margin: 50px auto 70px auto;
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  .image {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Это ключевое свойство */
+    object-position: center;
+  }
+
+  .buttons {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .smallButton {
+      display: none;
+    }
+
+    .defaultButton {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .leftButton, .rightButton {
+    display: flex;
+    background: var(--light-gray);
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+
+
+  }
+
+  .leftButton {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .rightButton {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .itemInfo {
+    z-index: 1;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    .recommendScore {
+      font-family: "Nunito-Bold", sans-serif;
+      font-size: 24px;
+      color: white;
+      filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+
+      .extra {
+        color: var(--theme-color);
+      }
+    }
+
+    .title {
+      width: 670px;
+      font-family: "Nunito-Bold", sans-serif;
+      font-size: 64px;
+      color: white;
+      filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+    }
+  }
+}
+
+@media screen and (max-width: 1050px){
+  .topic {
+    max-width: 720px;
+    height: 465px;
+
+    .itemInfo {
+      .recommendScore {
+        font-size: 20px;
+      }
+      .title {
+        width: 420px;
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .topic {
+    max-width: 480px;
+    height: 245px;
+
+    .buttons {
+      .smallButton {
+        display: flex;
+        align-items: center;
+      }
+
+      .defaultButton {
+        display: none;
+      }
+
+      .leftButton, .rightButton {
+        width: 26px;
+        height: 26px;
+
+      }
+
+      .leftButton {
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+
+      .rightButton {
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+    }
+
+    .itemInfo {
+      .recommendScore {
+        font-size: 18px;
+      }
+      .title {
+        width: 270px;
+        font-size: 24px;
+      }
+    }
+  }
+}

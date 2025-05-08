@@ -1,0 +1,45 @@
+.button {
+  cursor: pointer;
+
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+//button-types
+.primary {
+  background-color: var(--theme-color);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--theme-color-300);
+  }
+}
+
+.outline {
+  border: 2px solid var(--gray);
+  color: var(--black);
+
+  &:hover {
+    background-color: var(--light-gray);
+  }
+}
+
+//button-sizes
+.small {
+  height: 30px;
+  width: 100px;
+}
+
+.medium {
+  height: 35px;
+  width: 150px;
+}
+
+.large {
+  height: 45px;
+  width: 100%;
+}

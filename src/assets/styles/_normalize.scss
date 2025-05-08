@@ -9,15 +9,26 @@ a {
   text-decoration: none;
 }
 
-input, button {
-  all: unset;
+h1, h2, h3, h4, h5, h6, p, a, span, input, button {
+  font-family: "Nunito", sans-serif;
+}
+
+button, input {
+  border: none;
+  outline: none;
+  background: none;
 }
 
 body {
-  background: var(--background);
+  background: var(--white);
   height: 100vh;
 }
 
 body::-webkit-scrollbar {
+  display: none;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
   display: none;
 }

@@ -1,8 +1,20 @@
+"use client";
+
 import Logo from "@/assets/icons/Logo.svg";
 import SmallLogo from "@/assets/icons/LogoPhone.svg";
 import styles from "./Footer.module.scss";
+import { usePathname } from "next/navigation";
+import { routingLinks } from "@/config/routingLinks";
 
 export const Footer = () => {
+  const pathname = usePathname();
+  if (
+    routingLinks.login === pathname ||
+    routingLinks.registration === pathname
+  ) {
+    return;
+  }
+
   return (
     <div className={styles.footer}>
       <div className={styles.footerBlock}>

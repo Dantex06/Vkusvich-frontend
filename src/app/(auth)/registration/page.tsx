@@ -7,6 +7,8 @@ import { Button, Checkbox, Input } from "@/components/UI-kit";
 import { routingLinks } from "@/config/routingLinks";
 import { ButtonSize, ButtonTypes } from "@/components/UI-kit/Button/type";
 import { z } from "zod";
+import { useAppDispatch } from "@/config/hooks";
+import { registration } from "@/entities/account/api/account.thunks";
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Неправильно введена почта" }),
@@ -17,6 +19,8 @@ const loginSchema = z.object({
 type formLogin = z.infer<typeof loginSchema>;
 
 const Registration = () => {
+  const dispatch = useAppDispatch();
+
   const {
     register,
     handleSubmit,
@@ -25,8 +29,13 @@ const Registration = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit: SubmitHandler<formLogin> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<formLogin> = async (data) => {
+    try {
+      const resultAction = await dispatch(registration(data));
+      console.log(resultAction);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (

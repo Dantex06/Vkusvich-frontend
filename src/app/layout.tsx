@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/assets/styles/index.scss";
 import { Footer, Header } from "@/widgets";
+import { ProviderLayout } from "@/app/provider";
 
 export const metadata: Metadata = {
   title: "Vkusvich - рецепты со всего мира",
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <ProviderLayout>
+          <Header />
+          {children}
+          <Footer />
+        </ProviderLayout>
       </body>
     </html>
   );
